@@ -1,0 +1,43 @@
+build_settings:
+   verbose: true
+   clone_depth: 1
+   ignore:
+      - "vendor"
+      - "tests"
+setup:
+   composer:
+       action: "install"
+       prefer_dist: true
+test:
+   slack_notify:
+      webhook_url: "https://hooks.slack.com/services/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"
+      room: "#devops"
+      username: "PHPCI"
+      icon: ":mega:"
+      message: "%PROJECT_TITLE% - starting build %BUILD%"
+   env:
+       APPLICATION_ENV: "development"
+  php_unit:
+        config:
+            - "phpunit.xml"
+success:
+  slack_notify:
+      webhook_url: "https://hooks.slack.com/services/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"
+      room: "#devops"
+      username: "PHPCI"
+      icon: ":metal:"
+      message: "%PROJECT_TITLE% - build %BUILD% success"
+failure:
+  slack_notify:
+      webhook_url: "https://hooks.slack.com/services/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"
+      room: "#devops"
+      username: "PHPCI"
+      icon: ":boom:"
+      message: "%PROJECT_TITLE% - build %BUILD% failed"
+  email:
+      committer: true
+      default_mailto_address: eminetto@coderockr.com
+complete:
+    clean_build:
+        remove:
+            - vendor
