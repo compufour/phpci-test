@@ -1,0 +1,25 @@
+ArtesanatoSoftware\BuracosTexto
+ [x] Zero buracos
+ [x] Zero buracos com espaco
+ [x] Um buraco
+ [x] Zero buraco b
+ [x] Zero buraco a b
+ [x] Zero buraco c
+ [x] Texto com espacos
+ [x] Texto maiusculo
+ [x] Texto quebra de linha
+
+ArtesanatoSoftware\CaixaEletronico
+ [x] Dez
+ [x] Vinte
+ [x] Trinta
+ [x] Quarenta
+ [x] Cinquenta
+ [x] Oitenta
+ [x] Cem
+ [x] Cento e trinta
+ [x] Setenta e cinco
+
+ArtesanatoSoftware\Calculator
+ [x] Sum
+
