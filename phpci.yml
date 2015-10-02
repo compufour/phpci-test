@@ -17,8 +17,8 @@ test:
       message: "%PROJECT_TITLE% - starting build %BUILD%"
    env:
        APPLICATION_ENV: "development"
-  php_unit:
-        config:
+   php_unit:
+       config:
             - "phpunit.xml"
 success:
   slack_notify:
